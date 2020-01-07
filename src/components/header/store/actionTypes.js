@@ -1,0 +1,1 @@
+export const HEADER_STATE = 'header/HEADER_STATE';

@@ -1,0 +1,1 @@
+export const CHILDPAGE_STATE = 'childpage/CHILDPAGE_STATE';
