@@ -8,9 +8,8 @@ import Header from './components/header/header'
 import Home from './pages/home/home'
 import ChildPage from './pages/childpage/childpage'
 
-
 class App extends Component {
-  render() {
+  render () {
     return (
       <Provider store={store}>
         {/* 路由页面 */}

@@ -14,11 +14,11 @@ export const changeHomeState = (data) => {
 export const asyncGet = () => {
   return (dispatch, getState) => {
     axios.get('/ycorrect/user/login?username=七八九九&password=123456').then((res) => {
-			const data = res.data;
-			const action = changeHomeState(data.ret_msg);
-			dispatch(action);
-		}).catch((error) => {
-			console.log(error)
-		})
+      const data = res.data;
+      const action = changeHomeState(data.ret_msg);
+      dispatch(action);
+    }).catch((error) => {
+      console.log(error)
+    })
   }
 }

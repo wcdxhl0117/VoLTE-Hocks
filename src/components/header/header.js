@@ -10,15 +10,16 @@ import {
 } from './style'
 
 class Header extends Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props);
   }
-  render() {
+  render () {
     return (
-      <HeaderWrapper style={{marginBottom:'20px'}}>
-        <Link style={{marginRight: '20px'}} to='/home'>To Home</Link>
+      <HeaderWrapper style={{ marginBottom: '20px' }}>
+        <Link style={{ marginRight: '20px' }} to='/home'>To Home</Link>
         <Link to='/child'>To Child</Link>
-        <span style={{paddingLeft: '20px'}}>{this.props.header_state}</span>
+        <span style={{ paddingLeft: '20px' }}>{this.props.header_state}</span>
       </HeaderWrapper>
     );
   }
@@ -27,15 +28,15 @@ class Header extends Component {
 const mapState = (state) => {
   // 获取state
   return {
-		header_state: state.getIn(['header', 'header_state'])
-	}
+    header_state: state.getIn(['header', 'header_state'])
+  }
 }
 
 const mapDispatch = (dispatch) => ({
   // 派发state
-	changeHeaderData() {
-		dispatch(actionCreators.asyncGet());
-	}
+  changeHeaderData () {
+    dispatch(actionCreators.asyncGet());
+  }
 });
 
 export default connect(mapState, mapDispatch)(Header);
