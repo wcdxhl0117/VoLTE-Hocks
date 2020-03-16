@@ -34,4 +34,15 @@ git status
 
 # 远程仓库
 
--
+- 本地分支上传到远程 git push --set-upstream origin branch-a
+- set-upstream 是指设置上流分支，origin 指远端仓库，所以这个命令就是把远程仓库的 branch-a 分支作为本地的上流分支 branch-a
+
+- git fetch 获知远端仓库信息
+- git checkout branch-a 切换分支到 branch-a
+
+# git push
+
+# rebase 变基,枚举变更的 commit
+
+- 将 bc 分支变基为 master 最后一次提交后一次提交
+- 在 bc 分支 git rebase master 解决冲突后 git add . 放进暂存区，然后 git rebase --continue 继续下一个节点的 rebase
